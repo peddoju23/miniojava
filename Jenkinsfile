@@ -1,7 +1,7 @@
 node{
       def mvnHome = tool name: 'maven 3.5.4', type: 'maven' 
       stage('Checkout'){
-         git 'https://github.com/peddoju23/miniojava.git'
+         git 'https://github.com/peddoju23/miniojava'
        
       }  
       stage('Build'){
