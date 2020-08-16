@@ -21,7 +21,7 @@ node {
         sh 'docker build -t myprojectharbor/myprojectminio .'
     }
     stage('Docker push'){
-        sh 'docker login -u dockerhuduson -p'
+        sh 'docker login -u sandeep -p Ashvikhi970@'
         sh 'docker push myproject/myprojectminio'
-    }
+   
     }
