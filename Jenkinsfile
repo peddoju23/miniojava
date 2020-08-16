@@ -23,5 +23,5 @@ node {
     stage('Docker push'){
         sh 'docker login -u sandeep -p Ashvikhi970@'
         sh 'docker push myproject/myprojectminio'
-   
     }
+  }
