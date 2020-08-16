@@ -3,7 +3,7 @@ node {
     stage('Preparation') { 
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
         mvnHome = tool 'M3'
-    }
+            }
     stage('Build') {
         withEnv(["MVN_HOME=$mvnHome"]) {
             if (isUnix()) {
@@ -18,7 +18,7 @@ node {
         archiveArtifacts 'target/*.jar'
     }
     stage('Build Image') {
-        sh 'docker build -t myprojectharbor/myprojectminio .''
+        sh 'docker build -t myprojectharbor/myprojectminio .'
     }
     stage('Docker push'){
         sh 'docker login -u dockerhuduson -p'
